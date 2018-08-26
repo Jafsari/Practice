@@ -19,7 +19,7 @@ class App extends Component {
       //coooooooooool
       //Is it working??
       //Will deploy work?
-      //woo
+      //wooo
       <div className="App">
         <img className="icon" src ={circleci} alt ='' />
       <div>
