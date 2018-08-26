@@ -37,7 +37,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
-      steps:
+    steps:
       - checkout
       # run tests!
       - run: yarn test
