@@ -1,0 +1,70 @@
+
+.App{
+  text-align:center;
+  /* position:relative;
+  top:300px; */
+}
+.text{
+  padding:20px;
+  animation:fade-in 2s linear;
+}
+.icon{
+  height:300px;
+  width:300px;
+  animation:fade-in 3s linear;
+  /* transition: all .2s ease-in-out;  */
+}
+
+/* .icon:hover{
+  cursor:pointer;
+  transform: scale(1.1); 
+} */
+.button {
+  background-color: red; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition: all .2s ease-in-out;
+  -webkit-animation:pop-in 1.5s;
+  -moz-animation:pop-in 1.5s;
+  -ms-animation:pop-in 1.5s; 
+}
+
+.button:hover { 
+  cursor:pointer;
+  transform: scale(1.1); 
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes fade-in{
+  from { opacity: 0}
+  to  {opacity:1}
+}
+
