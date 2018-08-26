@@ -61,4 +61,5 @@ jobs:
             -build
             -deploy:
               requires:
+               -build
                -test
