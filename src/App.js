@@ -16,6 +16,7 @@ class App extends Component {
   render() {
   const navBar = (this.state.Text ? (<div className="text">The shortest distance from idea to execution. Automate your development process quickly, safely, and at scale.</div> ): ( <div className="empty"></div>))
     return (
+      //coooooooooool
       <div className="App">
         <img className="icon" src ={circleci} alt ='' />
       <div>
