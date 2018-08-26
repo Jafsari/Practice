@@ -18,7 +18,8 @@ class App extends Component {
     return (
       //coooooooooool
       //Is it working??
-      // it will work!!
+      //Will deploy work?
+      //Deploy deploy deploy!
       <div className="App">
         <img className="icon" src ={circleci} alt ='' />
       <div>
