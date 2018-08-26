@@ -2,19 +2,20 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-
+#  - image: circleci/node:7.10
 version: 2
 jobs:
   build:
+    ...
+  deploy:
     docker:
-      # specify the version you desire here
       - image: circleci/node:7.10
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
     working_directory: ~/repo
 
     steps:
@@ -36,19 +37,6 @@ jobs:
         
       # run tests!
       - run: yarn test
-version: 2
-jobs:
-  build:
-    ...
-  deploy:
-    docker:
-      - image: buildpack-deps:trusty
-    steps:
-      - checkout
-      - run:
-          name: Deploy Master to Heroku
-          command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
 
 workflows:
   version: 2
